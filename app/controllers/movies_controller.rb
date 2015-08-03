@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = Movie.find(params[id])
+    @movie = Movie.find(params[:id])
   end
 
   def new_form
@@ -35,12 +35,14 @@ class MoviesController < ApplicationController
     @movie.image_url = params[:image_url]
     @movie.director_id = params[:director_id]
 
+    @movie.save
+
     render("show")
   end
 
   def destroy
-    movie = Movie.find(params[:id])
+    @movie = Movie.find(params[:id])
 
-    movie.destroy
+    @movie.destroy
   end
 end
