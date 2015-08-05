@@ -1,4 +1,4 @@
-class CreateDirectors < ActiveRecord::Migration
+dclass CreateDirectors < ActiveRecord::Migration
   def change
     create_table :directors do |t|
       t.string :dob

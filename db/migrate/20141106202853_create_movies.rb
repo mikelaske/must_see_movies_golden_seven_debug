@@ -8,8 +8,7 @@ class CreateMovies < ActiveRecord::Migration
       t.string :image_url
       t.integer :director_id
 
-      t.timestamps
-
+      t.timestamps null: false
     end
   end
 end

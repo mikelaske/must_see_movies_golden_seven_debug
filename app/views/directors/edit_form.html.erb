@@ -2,13 +2,14 @@
   <h1>Edit Director #<%= @director.id %></h1>
 </div>
 
-<form action="/update_director/<%= @director.id %>" class="form-horizontal">
-  <!-- Label and input for dob -->
+<form action="http://localhost:3000/update_director/<%= @director.id %>">
+
+ <!-- Label and input for dob -->
   <div class="form-group">
     <label for="dob" class="col-sm-2 control-label">
       Dob
     </label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
       <input type="text" id="dob" name="the_dob" placeholder="Dob" class="form-control" value="<%= @director.dob %>">
     </div>
   </div>
@@ -18,7 +19,7 @@
     <label for="name" class="col-sm-2 control-label">
       Name
     </label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
       <input type="text" id="name" name="the_name" placeholder="Name" class="form-control" value="<%= @director.name %>">
     </div>
   </div>
@@ -28,7 +29,7 @@
     <label for="bio" class="col-sm-2 control-label">
       Bio
     </label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
       <textarea id="bio" name="the_bio" placeholder="Bio" class="form-control" rows="3"><%= @director.bio %></textarea>
     </div>
   </div>
@@ -36,16 +37,17 @@
   <!-- Label and input for image_url -->
   <div class="form-group">
     <label for="image_url" class="col-sm-2 control-label">
-      Image url
+      Image URL
     </label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
       <input type="text" id="image_url" name="the_image_url" placeholder="Image url" class="form-control" value="<%= @director.image_url %>">
     </div>
   </div>
 
   <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
+    <div class="col-sm-offset-2 col-sm-6">
       <input type="submit" value="Update Director" class="btn btn-primary">
     </div>
   </div>
-</form>
+  <button>Update Director</button>
+  </form>

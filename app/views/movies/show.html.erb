@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Movie #<%= @movie.id %></h1>
+  <h1><%= @movie.title %></h1>
 </div>
 
 <dl class="dl-horizontal">
@@ -18,8 +18,8 @@
   <dt>Director ID</dt>
   <dd><%= @movie.director_id %></dd>
 
-  <dt>Image</dt>
-  <dd><img src="<%= @movie.image_url %>" width="320"></dd>
+  <dt></dt>
+  <dd><img src="<%= @movie.image_url %>" width="200"></dd>
 
 
 </dl>
